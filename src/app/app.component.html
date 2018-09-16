@@ -1,0 +1,57 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<app-menu></app-menu>
+<div class="container-fluid">
+  <div class="main">
+   
+    <div class="row">
+      <div class="col-md-6 offset-md-5">
+       <app-search-box-form (sendDataToParent)=onEmitData($event)></app-search-box-form>
+      </div>
+    </div>
+    <div class="row" style="padding: 10px;">
+      <div class="col-md-12">
+        <app-heat-map [mapResult]="mapResult"></app-heat-map>
+      </div>
+    </div>
+    <div class="row result-tiles-div">
+      <div class="col-md-4">
+        <div class="result-tile">
+          <span class="icon-span">
+            <i class="fab fa-twitter-square"></i>
+          </span>
+          <span>Twitter results</span>
+          <!-- <span style="font-size:10px" class="close-button">
+            <i class="fas fa-times-circle"></i>
+          </span> -->
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="result-tile">
+          <span class="icon-span">
+            <i class="fab fa-twitter-square"></i>
+          </span>
+          <span>Facebook results</span>
+          <!-- <span style="font-size:10px" class="close-button">
+            <i class="fas fa-times-circle"></i>
+          </span> -->
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="result-tile">
+          <span class="icon-span">
+            <i class="fab fa-twitter-square"></i>
+          </span>
+          <span>Instagram results</span>
+          <!-- <span style="font-size:10px" class="close-button">
+            <i class="fas fa-times-circle"></i>
+          </span> -->
+        </div>
+      </div>
+    </div>
+    <div class="row results-grid" style="margin-top:12px;">
+      <div class="col-md-12">
+        <app-resultsgrid [gridResult]="gridResult" ></app-resultsgrid>
+      </div>
+    </div>
+  </div>
+</div>
